@@ -1,64 +1,52 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Readme ApiRestfull
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Banco de dados
 
-## About Laravel
+Para realização do teste pratico, montei um bando de dados com as tabelas de User, Post, PostUser, Likes e Comments. Abaixo estão as tabelas com seus atributos e relações. 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- User
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![Captura de Tela 2022-08-10 às 03.48.11.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c3dc3b4b-4126-4eaa-a407-c89eb935bb83/Captura_de_Tela_2022-08-10_s_03.48.11.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Post
 
-## Learning Laravel
+![Captura de Tela 2022-08-10 às 03.48.29.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/902eb479-2af8-43c7-98c4-f7064f05101d/Captura_de_Tela_2022-08-10_s_03.48.29.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- PostUser (tabela pivot)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![Captura de Tela 2022-08-10 às 03.48.42.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ffa57e1f-eab3-4486-8488-55d84e1edb4b/Captura_de_Tela_2022-08-10_s_03.48.42.png)
 
-## Laravel Sponsors
+- Comments
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+![Captura de Tela 2022-08-10 às 03.48.59.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c213fd5a-9126-4dfa-b78a-0a23e73a000c/Captura_de_Tela_2022-08-10_s_03.48.59.png)
 
-### Premium Partners
+- Likes
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![Captura de Tela 2022-08-10 às 03.49.10.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f9d3e61a-db91-4906-b7ab-280f35515fc2/Captura_de_Tela_2022-08-10_s_03.49.10.png)
 
-## Contributing
+Optei por utilizar as relations do Laravel, pois alem de ficar visível no próprio código as relações que cada tabela tem, fica mais simples de fazer as query’s, alem de ficar mais legível pra quem nao conhece/desenvolveu o código.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+O Laravel nos fornecem diversas ferramentas que facilitam o desenvolvimento. Portanto, com as factory relations, foi possível popular o banco de dados para teste, com poucas linhas de código, como pode ver abaixo.
 
-## Code of Conduct
+![Captura de Tela 2022-08-10 às 03.58.57.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52141b5e-a919-4a7c-8a93-f21c3de494c1/Captura_de_Tela_2022-08-10_s_03.58.57.png)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Como rodar o projeto Laravel 💻
 
-## Security Vulnerabilities
+## Necessário na máquina local
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Composer
+- PHP v8
+- Redis
+- MySql
+- sqlite
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- Copie `env.example` para `.env`
+- Entre na pasta do projeto pelo terminal e rode o comando `composer install`.
+- Crie um database chamado ’social_media’.
+- Rode as migrations no projeto com o comando `php artisan migrate`.
+- Em seguida, popule o banco com o comando `php artisan db:seed`.
+- Inicie o redis no terminal com o comando `redis-server`.
+- Após isso, entre na pasta do projeto e digite o comando `php artisan serve` .
+- Para rodar os testes é necessário rodar as migrations no banco de teste “sqlite”
+- Portanto, rode o comando `php artisan migrate —database=sqlite`
+- Digite `php artisan test` para rodar os teste funcionais
